@@ -1,0 +1,15 @@
+<div ng-if="!vm.event">
+  <h2>Show</h2>
+</div>
+
+<div ng-if="vm.event">
+  <h2>{{vm.event.name}} starts {{vm.event.start}} ends {{vm.event.end}}!</h2>
+
+  <div class="edit-event">
+    <input type="text" ng-model="vm.event.name" placeholder="Name" />
+    <input type="date" ng-model="vm.event.year" placeholder="Start" />
+    <input type="date" ng-model="vm.event.year" placeholder="End" />
+    <button data-ng-click="vm.update()">Edit</button>
+    <button data-ng-click="vm.destroy()">Delete</button>
+  </div>
+</div>
