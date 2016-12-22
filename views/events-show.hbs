@@ -1,0 +1,17 @@
+{{#unless event}}
+<h2>That event could not be found!</h2>
+{{else}}
+<h2>Name:  {{event.name}}</h2>
+<h2>Start: {{event.start}}</h2>
+<h2>End: {{event.end}}</h2>
+
+
+
+
+<form action="/events/{{event.name}}" method="post">
+  <input type="text" name="event[name]" placeholder="Name" value="{{event.name}}" />
+  <input type="text" name="event[start]" placeholder="Phone" value="{{event.start}}" />
+  <input type="text" name="event[end]" placeholder="Email" value="{{event.end}}" />
+  <button type="sumbit">Edit Event</button> <form method="post" action="/events/{{event.name}}/delete"><button type="submit">Delete Event</button></form>
+</form>
+{{/unless}}

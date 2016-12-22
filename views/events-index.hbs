@@ -1,0 +1,12 @@
+<h2>{{events.length}} Events</h2>
+{{#each events as |event index|}}
+<a href="/events/{{event.name}}">{{event.name}}</a></br>
+{{/each}}
+
+<h2> Add Event </h2>
+<form action="/events" method="post">
+  <input type="text" name="event[name]" placeholder="Name" />
+  <input type="text" name="event[start]" placeholder="Start" />
+  <input type="text" name="event[end]" placeholder="End" />
+  <button type="submit">Add Event</button>
+</form>

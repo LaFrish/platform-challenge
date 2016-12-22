@@ -1,0 +1,14 @@
+<h2>{{vm.events.length}} Events</h2>
+
+<div class="events">
+  <h3 data-ng-repeat="event in vm.events">
+    <a data-ui-sref="show({name: event.name})">{{event.name}}</a>
+  </h2>
+</div>
+
+<form ng-submit="vm.create()">
+  <input type="text" ng-model="vm.newEvent.name" placeholder="Name" />
+  <input type="date" ng-model="vm.newEvent.start" placeholder="Start" />
+  <input type="date" ng-model="vm.newEvent.end" placeholder="End" />
+  <button type="submit">Add Event</button>
+</form>
